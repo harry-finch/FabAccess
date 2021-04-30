@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 23)
+    (drawings 22)
     (tracks 206)
     (zones 0)
     (modules 25)
@@ -1206,9 +1206,6 @@
     )
   )
 
-  (gr_text FabAccess (at 63.6 27.8) (layer F.SilkS)
-    (effects (font (size 1 1) (thickness 0.15)))
-  )
   (gr_text DTR (at 83.4 36.8) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
