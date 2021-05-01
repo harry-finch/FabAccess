@@ -25,36 +25,14 @@ F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manua
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:UMH3N Q1
-U 1 1 607F1EAC
-P 3800 1400
-F 0 "Q1" V 4228 1400 50  0000 C CNN
-F 1 "UMH3N" V 4137 1400 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 3805 960 50  0001 C CNN
-F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/transistor/digital/emh3t2r-e.pdf" H 3950 1400 50  0001 C CNN
-	1    3800 1400
-	0    1    -1   0   
-$EndComp
-$Comp
-L Transistor_BJT:UMH3N Q1
-U 2 1 607F3118
-P 3800 1900
-F 0 "Q1" V 4135 1900 50  0000 C CNN
-F 1 "UMH3N" V 4226 1900 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 3805 1460 50  0001 C CNN
-F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/transistor/digital/emh3t2r-e.pdf" H 3950 1900 50  0001 C CNN
-	2    3800 1900
-	0    1    1    0   
-$EndComp
-$Comp
 L fab:BUTTON_B3SN SW1
 U 1 1 607FC406
-P 3900 2900
-F 0 "SW1" H 3900 3185 50  0000 C CNN
-F 1 "BUTTON_B3SN" H 3900 3094 50  0000 C CNN
-F 2 "fab:Button_Omron_B3SN_6x6mm" H 3900 3100 50  0001 C CNN
-F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3sn.pdf" H 3900 3100 50  0001 C CNN
-	1    3900 2900
+P 3900 2200
+F 0 "SW1" H 3900 2485 50  0000 C CNN
+F 1 "BUTTON_B3SN" H 3900 2394 50  0000 C CNN
+F 2 "fab:Button_Omron_B3SN_6x6mm" H 3900 2400 50  0001 C CNN
+F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3sn.pdf" H 3900 2400 50  0001 C CNN
+	1    3900 2200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -68,38 +46,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 1700 1500 50  0001 C CNN
 	1    1700 1500
 	1    0    0    -1  
 $EndComp
-Text GLabel 3500 1200 0    50   Input ~ 0
-RTS
-Text GLabel 3500 2100 0    50   Input ~ 0
-DTR
-Wire Wire Line
-	3500 1200 3600 1200
-Wire Wire Line
-	3500 2100 3600 2100
-Text GLabel 3500 1650 0    50   Input ~ 0
-DTR
-Text GLabel 4150 1650 2    50   Input ~ 0
-RTS
-Wire Wire Line
-	3500 1650 3750 1650
-Wire Wire Line
-	3750 1650 3750 1600
-Wire Wire Line
-	3750 1600 3800 1600
-Wire Wire Line
-	3800 1700 3850 1700
-Wire Wire Line
-	3850 1700 3850 1650
-Text GLabel 4150 2100 2    50   Input ~ 0
-IO0
-Text GLabel 4150 1200 2    50   Input ~ 0
-RESET
-Wire Wire Line
-	4000 1200 4150 1200
-Wire Wire Line
-	3850 1650 4150 1650
-Wire Wire Line
-	4000 2100 4150 2100
 Wire Notes Line
 	3000 750  3000 3400
 Wire Notes Line
@@ -306,22 +252,22 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0118
 U 1 1 609EB55D
-P 4250 3000
-F 0 "#PWR0118" H 4250 2750 50  0001 C CNN
-F 1 "GND" H 4255 2827 50  0000 C CNN
-F 2 "" H 4250 3000 50  0001 C CNN
-F 3 "" H 4250 3000 50  0001 C CNN
-	1    4250 3000
+P 4250 2300
+F 0 "#PWR0118" H 4250 2050 50  0001 C CNN
+F 1 "GND" H 4255 2127 50  0000 C CNN
+F 2 "" H 4250 2300 50  0001 C CNN
+F 3 "" H 4250 2300 50  0001 C CNN
+	1    4250 2300
 	1    0    0    -1  
 $EndComp
-Text GLabel 3500 2900 0    50   Input ~ 0
+Text GLabel 3500 2200 0    50   Input ~ 0
 RESET
 Wire Wire Line
-	3500 2900 3700 2900
+	3500 2200 3700 2200
 Wire Wire Line
-	4100 2900 4250 2900
+	4100 2200 4250 2200
 Wire Wire Line
-	4250 2900 4250 3000
+	4250 2200 4250 2300
 Wire Notes Line
 	4900 750  4900 3400
 Wire Notes Line
@@ -387,70 +333,41 @@ Wire Wire Line
 	7150 2400 7000 2400
 NoConn ~ 5800 2200
 NoConn ~ 5800 2700
-Text Notes 3950 3350 2    50   ~ 0
-Auto and manual reset
+Text Notes 4050 3350 2    50   ~ 0
+Upload and reset buttons
 Text Notes 1550 3350 2    50   ~ 0
 Power management
 Text Notes 5550 3350 2    50   ~ 0
 ESP8266 wiring
 NoConn ~ 7000 2300
-Text GLabel 2350 4050 2    50   Input ~ 0
-RTS
-Text GLabel 2350 4150 2    50   Input ~ 0
-DTR
-Text GLabel 1550 4150 0    50   Input ~ 0
+Text GLabel 1700 4150 0    50   Input ~ 0
 RX
-Text GLabel 1550 4250 0    50   Input ~ 0
+Text GLabel 1700 4050 0    50   Input ~ 0
 TX
-$Comp
-L Connector_Generic:Conn_02x03_Top_Bottom J1
-U 1 1 608E0957
-P 1900 4150
-F 0 "J1" H 1950 4467 50  0000 C CNN
-F 1 "FTDI" H 1950 4376 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical_SMD" H 1900 4150 50  0001 C CNN
-F 3 "~" H 1900 4150 50  0001 C CNN
-	1    1900 4150
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3.3V #PWR0101
 U 1 1 608EC62A
-P 1550 4000
-F 0 "#PWR0101" H 1550 3850 50  0001 C CNN
-F 1 "+3.3V" H 1565 4173 50  0000 C CNN
-F 2 "" H 1550 4000 50  0001 C CNN
-F 3 "" H 1550 4000 50  0001 C CNN
-	1    1550 4000
+P 1700 3900
+F 0 "#PWR0101" H 1700 3750 50  0001 C CNN
+F 1 "+3.3V" H 1715 4073 50  0000 C CNN
+F 2 "" H 1700 3900 50  0001 C CNN
+F 3 "" H 1700 3900 50  0001 C CNN
+	1    1700 3900
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0102
 U 1 1 608EE3AF
-P 2350 4300
-F 0 "#PWR0102" H 2350 4050 50  0001 C CNN
-F 1 "GND" H 2355 4127 50  0000 C CNN
-F 2 "" H 2350 4300 50  0001 C CNN
-F 3 "" H 2350 4300 50  0001 C CNN
-	1    2350 4300
+P 1700 4300
+F 0 "#PWR0102" H 1700 4050 50  0001 C CNN
+F 1 "GND" H 1705 4127 50  0000 C CNN
+F 2 "" H 1700 4300 50  0001 C CNN
+F 3 "" H 1700 4300 50  0001 C CNN
+	1    1700 4300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 4000 1550 4050
-Wire Wire Line
-	1550 4050 1700 4050
-Wire Wire Line
-	1550 4150 1700 4150
-Wire Wire Line
-	1550 4250 1700 4250
-Wire Wire Line
-	2200 4050 2350 4050
-Wire Wire Line
-	2200 4150 2350 4150
-Wire Wire Line
-	2200 4250 2350 4250
-Wire Wire Line
-	2350 4250 2350 4300
+	1700 4250 1700 4300
 $Comp
 L power:+5V #PWR0103
 U 1 1 60939153
@@ -868,4 +785,55 @@ Wire Notes Line
 	8200 2000 8200 750 
 Text Notes 8250 1950 0    50   ~ 0
 Test LED
+$Comp
+L fab:BUTTON_B3SN SW2
+U 1 1 608CDFC8
+P 3900 1450
+F 0 "SW2" H 3900 1735 50  0000 C CNN
+F 1 "BUTTON_B3SN" H 3900 1644 50  0000 C CNN
+F 2 "fab:Button_Omron_B3SN_6x6mm" H 3900 1650 50  0001 C CNN
+F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3sn.pdf" H 3900 1650 50  0001 C CNN
+	1    3900 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0119
+U 1 1 608CDFD2
+P 4250 1550
+F 0 "#PWR0119" H 4250 1300 50  0001 C CNN
+F 1 "GND" H 4255 1377 50  0000 C CNN
+F 2 "" H 4250 1550 50  0001 C CNN
+F 3 "" H 4250 1550 50  0001 C CNN
+	1    4250 1550
+	1    0    0    -1  
+$EndComp
+Text GLabel 3500 1450 0    50   Input ~ 0
+IO0
+Wire Wire Line
+	3500 1450 3700 1450
+Wire Wire Line
+	4100 1450 4250 1450
+Wire Wire Line
+	4250 1450 4250 1550
+$Comp
+L Connector_Generic:Conn_01x04 FTDI1
+U 1 1 608E8060
+P 2000 4050
+F 0 "FTDI1" H 2080 4042 50  0000 L CNN
+F 1 "Conn_01x04" H 2080 3951 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 2000 4050 50  0001 C CNN
+F 3 "~" H 2000 4050 50  0001 C CNN
+	1    2000 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3900 1700 3950
+Wire Wire Line
+	1700 3950 1800 3950
+Wire Wire Line
+	1700 4050 1800 4050
+Wire Wire Line
+	1700 4150 1800 4150
+Wire Wire Line
+	1700 4250 1800 4250
 $EndSCHEMATC
